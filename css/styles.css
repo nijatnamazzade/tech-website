@@ -1,0 +1,747 @@
+
+p {
+  color: #8f8f8f;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Loading Animation */
+
+.loader_bg {
+  position: fixed;
+  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+
+.loader:before, .loader:after {
+content: '';
+border: 1em solid #ff5733;
+border-radius: 50%;
+width: inherit;
+height: inherit;
+position: absolute;
+top: 0;
+left: 0;
+animation: loader 2s linear infinite;
+opacity: 0;
+}
+
+.loader:before {
+  animation-delay: .5s;
+}
+
+
+@keyframes loader {
+  0%  {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+   50%  {
+ 
+    opacity: 1;
+  }
+
+   100%  {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Navbar - heading */
+
+
+.navbar-section {
+
+    background: #0f8a9d;
+    background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+
+
+
+}
+
+#title {
+  
+  color: #fff;
+  text-align: left;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+   border-bottom-left-radius: 60% 40%;
+  border-bottom-right-radius: 50% 20%;
+
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.navbar-brand:hover {
+
+  font-size: 2.6rem;
+
+}
+.nav-item {
+  padding: 0 18px;
+}
+
+
+li a {
+  display: inline-block;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+ font-family: 'Jost', sans-serif;
+  
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+}
+
+.nav-link:hover::after {
+
+width: 100%;
+transition: width .3s;
+  
+}
+
+.big-heading {
+font-family: 'Jost', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.small-heading {
+    font-family: "Montserrat";
+    color: #fff;
+}
+
+.slide-right-img {
+margin-bottom: 12%;
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+    border: 0;
+  border-radius: 30px;
+}
+
+/* Services section */
+
+.services-section {
+ margin-top: 4%;
+
+}
+
+.services-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.services-heading::after {
+  content: '';
+  display: block;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+ width: 7%;
+transition: width .3s;
+  height: 3px;
+  background: red;
+  transition: width .3s;
+}
+
+.services-heading:hover::after {
+   width: 14%;
+}
+
+.services-card {
+
+  border-radius: 10px;
+ box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+   transition: all 0.3s ease-in-out;
+ border: 0;
+  
+}
+.services-card:hover {
+ box-shadow: 0 4px 15px rgba(44, 46, 65, .15);
+}
+.services-card:before {
+ content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #0D959F;
+   transform: scaleY(0);
+   transform-origin: top;
+     transition: transform 0.5s;
+   
+}
+
+.services-card:hover:before {
+  transform: scaleY(1);
+   transform-origin: bottom;
+   transition: transform 0.5s;
+}
+
+.services-card .card-body{
+  margin: 23% 12% 10% 12%;
+}
+.services-card h5 {
+  margin-top: 8%;
+   font-family: "Ubuntu";
+   font-weight: bold;
+}
+
+.services-card h4 {
+  
+   font-family: "Ubuntu";
+   font-weight: bold;
+position: absolute;
+left: 40px;
+top: 60px;
+font-size: 4em;
+font-weight: 800;
+z-index: 1;
+opacity: 0.1;
+transition: 0.5s;
+}
+
+.services-card:hover h4 {
+  
+   opacity: 1;
+   color: #fff;
+   transform: translateY(-40px);
+}
+
+.services-card h5 {
+  
+  position: relative;
+  font-size: 1.5em;
+  z-index: 2;
+  color: #333;
+transition: 0.5s;
+
+
+}
+
+
+.services-card:hover h5,
+.services-card:hover .card-text {
+ color: #fff;
+}
+
+
+.services-card .card-text {
+   position: relative;
+  font-size: 1.5em;
+  z-index: 2;
+  color: #555;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+
+}
+
+
+/* Articles section */
+
+.articles-section {
+ margin-top: 4%;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.articles-heading {
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+.articles-heading::after {
+  content: '';
+  display: block;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+ width: 7%;
+
+transition: width .3s;
+
+  height: 3px;
+  background: red;
+  transition: width .3s;
+}
+.articles-heading:hover::after {
+   width: 14%;
+}
+
+.articles-section .container-fluid {
+    background: #0E8B9D;
+    margin-top: 4%;
+
+}
+#articles-carousel {
+  margin-top: 4%;
+}
+.carousel-item {
+  padding-top: 10%;
+}
+.articles-text-left {
+font-family: 'IBM Plex Serif', serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.articles-text-left-bottom {
+color: #FFBE3E;
+
+}
+
+.articles-text-download  {
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
+
+
+/* Authors section */
+
+.authors-section {
+ margin-top: 7%;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.authors-heading {
+  font-size: 3rem;
+  text-align: center;
+
+}
+.authors-heading::after {
+  content: '';
+  display: block;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+ width: 7%;
+
+transition: width .3s;
+
+  height: 3px;
+  background: red;
+  transition: width .3s;
+}
+.authors-heading:hover::after {
+   width: 14%;
+}
+
+.authors-card {
+ 
+ box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+  transition: 0.3s ease-out;
+ border: 0;
+  position: relative;
+   overflow: hidden;
+  background: #fff;
+    height: 300px;
+  margin: 10% 0 10% 0;
+}
+
+.authors-card:hover {
+  box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+}
+
+.authors-card .image {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease-out;
+}
+
+.authors-card:hover .image{
+  transform: translateY(-100px);
+}
+.authors-card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-out;
+}
+.authors-card:hover .image img{
+  opacity: 0.7;
+}
+.authors-card:hover .image{
+ transform: translateY(-159px);
+}
+
+.authors-card .content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.authors-card .info{
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #000;
+  line-height: 26px;
+}
+.authors-card .info h2{
+  font-size: 27px;
+  margin: 3px 0;
+}
+.authors-card .info span{
+  color: #1a1a1a;
+}
+
+.authors-card .card-body{
+  margin: 23% 12% 10% 12%;
+}
+
+
+.authors-card h5 {
+  margin-top: 8%;
+   font-family: "Ubuntu";
+   font-weight: bold;
+}
+
+.authors-card h4 {
+  
+   font-family: "Ubuntu";
+   font-weight: bold;
+font-size: 4em;
+font-weight: 800;
+
+}
+
+.authors-card .card-text {
+   position: relative;
+  font-size: 1.5em;
+  color: #555;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+}
+
+.authors-card .card-body {
+  background-color: #fff;
+  text-align: center;
+}
+
+
+/* About section */
+
+.about-section {
+
+  font-family: 'Poppins', sans-serif;
+
+}
+.about-section .container-fluid {
+  padding-top: 3%;
+}
+
+.about-heading {
+  font-size: 3rem;
+  text-align: center;
+
+}
+.about-heading::after {
+  content: '';
+  display: block;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+ width: 7%;
+
+transition: width .3s;
+
+  height: 3px;
+  background: red;
+  transition: width .3s;
+}
+.about-heading:hover::after {
+   width: 14%;
+}
+
+
+.about-text-left {
+font-family: 'IBM Plex Serif', serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-top: 2%;
+}
+
+.about-text-left-bottom {
+color: #FF0000;
+
+}
+.about-media {
+  margin-top: 5%;
+}
+.about-media .media {
+  padding-top: 4%;
+}
+
+
+/* Contact section */
+
+.contact-section {
+
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2%;
+
+}
+.contact-section .container-fluid {
+  padding-top: 3%;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+.contact-heading::after {
+  content: '';
+  display: block;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+ width: 7%;
+
+transition: width .3s;
+
+  height: 3px;
+  background: red;
+  transition: width .3s;
+}
+.contact-heading:hover::after {
+   width: 14%;
+}
+
+
+form{
+  width: 360px;
+}
+
+
+.contact-card {
+ 
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-out;
+ border: 0;
+  position: relative;
+   overflow: hidden;
+  background: #fff;
+
+}
+
+.contact-card .contact-form {
+padding: 2% 5% 5% 5%;
+
+}
+
+
+/* Footer Section */
+
+
+.footer-top {
+  background-color: #6351CE;
+  color: #fff;
+  padding: 2% 0 2% 0;
+}
+
+.footer-section {
+   font-family: "Montserrat";
+ 
+}
+
+.footer-section a {
+text-decoration: none;
+
+}
+.footer-text {
+color: #fff;
+ line-height: 1.7;
+}
+
+
+
+
+
+
+
+/* MEdia Queries */
+
+
+
+
+@media screen and (max-width: 1100px){
+  
+  .big-heading {
+  font-size: 2.4rem;
+}
+
+}
+
+@media (max-width: 1044px) {
+
+
+#title {
+
+padding-bottom: 5%;
+
+}
+
+.footer-top {
+  
+  padding: 4% 0 4% 0;
+}
+
+}
+
+@media (max-width: 991px) {
+.services-card {
+  margin-top: 14%;
+}
+
+
+.authors-section {
+ margin-top: 20%;
+
+}
+
+#articles-carousel {
+
+  margin-top: 10%;
+
+}
+
+.articles-section {
+
+    margin-top: 15%;
+
+}
+.articles-text-left {
+
+  font-size: 1.5rem;
+  
+}
+
+  #title {
+    text-align: center;
+  }
+
+  .slide-right-img {
+    display: none;
+  }
+
+
+}
+
+
+@media (max-width: 767px) {
+.card {
+  
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.contact-card .contact-form {
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.services-card .card-body{
+  padding: 30% 12% 10% 12%;
+}
+
+
+.about-section .about-text-left {
+  text-align: center;
+}
+}
+
+@media (max-width: 609px) {
+
+.big-heading {
+  font-size: 2.2rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+#title {
+
+padding-bottom: 25%;
+
+}
+
+}
