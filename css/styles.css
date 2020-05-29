@@ -781,3 +781,12 @@ padding-bottom: 25%;
 }
 
 }
+
+
+@media (max-width: 450px) {
+
+form{
+  width: 200px;
+}
+
+  }
