@@ -73,3 +73,26 @@ new TypeIt(".articles-text-left-bottom", {
 
   $('.loader_bg').fadeToggle();
  }, 1300);
+
+
+
+/* Scroll Top Animation */
+
+$(document).ready(function(){
+
+  
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#btnScrollToTop').fadeIn();
+        } else {
+            $('#btnScrollToTop').fadeOut();
+        }
+    });
+
+  
+    $('#btnScrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},1200);
+        return false;
+    });
+
+});
