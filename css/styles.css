@@ -86,6 +86,38 @@ opacity: 0;
   }
 }
 
+
+/* SCroll Top Animation */
+
+#btnScrollToTop {
+
+position: fixed;
+z-index: 3;
+right: 10px;
+bottom: 40px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: #FD221E;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+color: #fff;
+border: none;
+outline: none;
+cursor: pointer;
+
+}
+
+
+
+#btnScrollToTop:active {
+background: #cc2333;
+}
+
+
+
+
+
+
 /* Navbar - heading */
 
 
@@ -736,6 +768,10 @@ padding-bottom: 5%;
 
 .navbar-brand {
   font-size: 2rem;
+}
+
+form{
+  width: 300px;
 }
 
 #title {
